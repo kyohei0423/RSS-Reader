@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="105" id="KGk-i7-Jjw" customClass="ArticleTableViewCell" customModule="RSS_Reader" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="104.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONO-wQ-K1A">
+                        <rect key="frame" x="5" y="8" width="310" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="2cF-jB-hgi"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日付" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uf0-Wl-LxM">
+                        <rect key="frame" x="5" y="79.5" width="310" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="gpD-W4-4jb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="コンテンツ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-sW-pKc">
+                        <rect key="frame" x="5" y="25" width="310" height="53.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="UPk-di-kaG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                        <color key="textColor" red="0.39215686274509803" green="0.39215686274509803" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UPk-di-kaG"/>
+                            </mask>
+                        </variation>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ONO-wQ-K1A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="53Z-DD-X6x"/>
+                    <constraint firstAttribute="trailing" secondItem="Uf0-Wl-LxM" secondAttribute="trailing" constant="5" id="7OD-qt-jNo"/>
+                    <constraint firstAttribute="trailing" secondItem="ONO-wQ-K1A" secondAttribute="trailing" constant="5" id="BZm-Ib-7Uu"/>
+                    <constraint firstAttribute="bottom" secondItem="Uf0-Wl-LxM" secondAttribute="bottom" constant="6" id="Xpx-0k-UAi"/>
+                    <constraint firstItem="Uf0-Wl-LxM" firstAttribute="top" secondItem="6vK-sW-pKc" secondAttribute="bottom" id="Zrv-0L-XlY"/>
+                    <constraint firstItem="Uf0-Wl-LxM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="dtO-ti-fVC"/>
+                    <constraint firstItem="6vK-sW-pKc" firstAttribute="top" secondItem="ONO-wQ-K1A" secondAttribute="bottom" id="kjd-6E-UFw"/>
+                    <constraint firstItem="6vK-sW-pKc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="lji-k6-5fK"/>
+                    <constraint firstItem="ONO-wQ-K1A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="q2S-Bu-wJx"/>
+                    <constraint firstAttribute="trailing" secondItem="6vK-sW-pKc" secondAttribute="trailing" constant="5" id="xMI-va-nBt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="date" destination="Uf0-Wl-LxM" id="EZB-sh-fyy"/>
+                <outlet property="descript" destination="6vK-sW-pKc" id="Uw0-Bo-2mM"/>
+                <outlet property="title" destination="ONO-wQ-K1A" id="2Db-C8-tIZ"/>
+            </connections>
+            <point key="canvasLocation" x="245" y="313.5"/>
+        </tableViewCell>
+    </objects>
+</document>
